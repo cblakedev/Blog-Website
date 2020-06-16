@@ -3,11 +3,11 @@
 <h1> Home </h1>
 <p> <%= startingContent %> </p>
 
-<%postedMsg.forEach(function){%>
+<%postedMsg.forEach(function(post){%>
   <h1> <%= post.title %> </h1>
   <p> <%= post.content.substring(0, 150) + "..."%>
   <a href="/posts/<%= post._id %>">Read More</a>
   </p>
-<%});%>
+<%})%>
 
 <%- include("partials/footer"); -%>
